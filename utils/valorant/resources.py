@@ -104,7 +104,7 @@ async def setup_emoji(bot: ValorantBot, guild: discord.Guild, local_code: str, f
         emoji = discord.utils.get(bot.emojis, name=name)
         if not emoji:
             try:
-                emoji = await guild.create_custom_emoji(name=name, image=__url_to_image(emoji_url))
+                pass # emoji = await guild.create_custom_emoji(name=name, image=__url_to_image(emoji_url))
             except discord.Forbidden:
                 if force:
                     raise ValorantBotError(response.get('MISSING_PERM'))
